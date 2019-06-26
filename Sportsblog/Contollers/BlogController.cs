@@ -10,7 +10,7 @@ namespace Sportsblog.Contollers
     {
         public string Index()
         {
-            throw new NotImplementedException();
+            return "Hello World"; //throw new NotImplementedException();
         }
 
 
