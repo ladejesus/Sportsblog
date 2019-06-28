@@ -10,5 +10,18 @@ namespace Sportsblog.Models
         public string SportName { get; set; }
         public int SportId { get; set; }
         public string Posts { get; set;}
+
+        public Sports()
+        {
+
+        }
+
+        public Sports(string sportName, int sportId, string posts)
+        {
+            SportName = sportName;
+            SportId = sportId;
+            Posts = posts;
+
+        }
     }
 }

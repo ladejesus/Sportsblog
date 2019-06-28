@@ -11,8 +11,22 @@ namespace Sportsblog.Models
         public int PostId { get; set; }
         public string PostContent { get; set; }
         public string Date { get; set; }
-        public string Description { get; set; }
         public string Tags { get; set; }
         public int SportId { get; set; }
+
+        public Posts()
+        {
+
+        }
+
+        public Posts(string title, int postId, string postContent, string date, string tags, int sportId)
+        {
+            Title = title;
+            PostId = postId;
+            PostContent = postContent;
+            Date = date;
+            Tags = tags;
+            SportId = sportId;
+        }
     }
 }
