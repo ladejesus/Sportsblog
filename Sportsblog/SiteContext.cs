@@ -46,13 +46,13 @@ namespace Sportsblog
 
                 modelBuilder.Entity<Posts>().HasData(
 
-                    new Posts { Title = "USA Women's Team", PostId = 1, PostContent = "The woman will have there hands full with France!", Date = "", SportId = 1, Tags = "World Cup" },
+                    new Posts { Title = "USA Women's Team", PostId = 1, PostContent = "The woman will have there hands full with France!", Date = "", SportId = 1, TagId = 3 },
 
-                    new Posts { Title = "France Goes Down", PostId = 2, PostContent = "USA took care of France with penalty kicks!", Date = "", SportId = 1, Tags = "Spoiler" },
+                    new Posts { Title = "France Goes Down", PostId = 2, PostContent = "USA took care of France with penalty kicks!", Date = "", SportId = 1, TagId = 1},
 
-                    new Posts { Title = "Cavs", PostId = 2, PostContent = "The Cavs draft class seems to be pretty good", Date = "", SportId = 2, Tags = "Hot Take" },
+                    new Posts { Title = "Cavs", PostId = 4, PostContent = "The Cavs draft class seems to be pretty good", Date = "", SportId = 2, TagId = 2 },
 
-                    new Posts { Title = "Durant", PostId = 3, PostContent = "Kevin Durant just turned down 31 mil!", Date = "", SportId = 2, Tags = "Hot Take" });
+                    new Posts { Title = "Durant", PostId = 3, PostContent = "Kevin Durant just turned down 31 mil!", Date = "", SportId = 2, TagId = 2});
 
             }
 

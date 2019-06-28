@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,17 +8,16 @@ namespace Sportsblog.Models
 {
     public class Sports
     {
+        [Key]
+        public int SportId { get; set; }
+
         public string SportName { get; set; }
-        public int SportId { get; set; }       
 
-        public Sports()
-        {
-        }
+        public virtual List<Posts> Posts { get; set; }
 
-        public Sports(string sportName, int sportId)
+       public Sports()
         {
-            SportName = sportName;
-            SportId = sportId;
+
         }
 
     }

@@ -5,7 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\CSS\_LayoutStyleSheet.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\CSS\" />
   </ItemGroup>
 
   <ItemGroup>
