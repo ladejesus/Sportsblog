@@ -8,20 +8,18 @@ namespace Sportsblog.Models
     public class Sports
     {
         public string SportName { get; set; }
-        public int SportId { get; set; }
-        public string Posts { get; set;}
+        public int SportId { get; set; }       
 
         public Sports()
         {
-
         }
 
-        public Sports(string sportName, int sportId, string posts)
+        public Sports(string sportName, int sportId)
         {
             SportName = sportName;
             SportId = sportId;
-            Posts = posts;
-
         }
+
     }
+
 }

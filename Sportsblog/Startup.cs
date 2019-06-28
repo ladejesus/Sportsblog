@@ -32,7 +32,7 @@ namespace Sportsblog
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id}");
+                    template: "{controller=Sports}/{action=Index}/{id}");
             });
         }
     }

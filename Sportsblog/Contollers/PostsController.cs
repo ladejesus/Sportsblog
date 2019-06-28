@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Sportsblog.Models;
+using Sportsblog.Repository;
 
 namespace Sportsblog.Contollers
 {
@@ -11,6 +13,64 @@ namespace Sportsblog.Contollers
         public IActionResult Index()
         {
             return View();
+        }
+
+        IRepository<Posts> postsRepo;
+
+        public PostsController(IRepository<Posts> postsRepo)
+        {
+            this.postsRepo = postsRepo;
+        }
+
+        //Create Review
+        [HttpGet]
+        public ViewResult CreateReview(int id)
+        {
+            ViewBag.MovieId = id;
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreateReview(Posts post)
+        {
+            postsRepo.Create(post);
+            return RedirectToAction("../Movie/SingleMovie/" + post.SportId);
+        }
+
+        public object SinglePost()
+        {
+            throw new NotImplementedException();
+        }
+
+        //Delete Review
+        [HttpGet]
+        public ViewResult DeleteReview(int id)
+        {
+            ViewBag.postId = id;
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult DeleteReview(Posts post)
+        {
+            postsRepo.Delete(post);
+            return RedirectToAction("../Movie/SingleMovie/" + post.SportId);
+        }
+
+        //Edit Review
+        [HttpGet]
+        public ViewResult EditPost(int id)
+        {
+            var model = postsRepo.GetById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult EditReview(Posts post)
+        {
+            postsRepo.Edit(post);
+
+            return RedirectToAction("../Movie/SingleMovie/" + post.SportId);
         }
     }
 }

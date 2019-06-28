@@ -10,7 +10,6 @@ namespace Sportsblog.Models
         public string TagName { get; set; }
         public int TagId { get; set; }
 
-
         public Tags()
         {
 

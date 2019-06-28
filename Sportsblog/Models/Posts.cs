@@ -13,11 +13,13 @@ namespace Sportsblog.Models
         public string Date { get; set; }
         public string Tags { get; set; }
         public int SportId { get; set; }
+        public int TagId { get; set; }
 
         public Posts()
         {
 
         }
+
 
         public Posts(string title, int postId, string postContent, string date, string tags, int sportId)
         {
@@ -29,4 +31,6 @@ namespace Sportsblog.Models
             SportId = sportId;
         }
     }
+    
+    
 }
