@@ -12,12 +12,14 @@ namespace Sportsblog.Models
 
         public Tags()
         {
+
         }
 
-        public Tags(string tagName, string posts, int tagId)
+        public Tags(string tagName, int tagId)
         {
             TagName = tagName;
             TagId = tagId;
         }
     }
+
 }

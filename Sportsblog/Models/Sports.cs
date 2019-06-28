@@ -8,8 +8,7 @@ namespace Sportsblog.Models
     public class Sports
     {
         public string SportName { get; set; }
-        public int SportId { get; set; }
-        
+        public int SportId { get; set; }       
 
         public Sports()
         {
@@ -19,8 +18,8 @@ namespace Sportsblog.Models
         {
             SportName = sportName;
             SportId = sportId;
-            
         }
+
     }
 
 }

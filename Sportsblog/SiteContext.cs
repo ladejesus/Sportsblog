@@ -21,6 +21,7 @@ namespace Sportsblog
                           .UseLazyLoadingProxies();
 
             base.OnConfiguring(optionsBuilder);
+        }
 
             protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -30,7 +31,7 @@ namespace Sportsblog
 
                     new Sports { SportName = "Soccer", SportId = 1 },
 
-                    new Sports { SportName = "Basketball", SportId = 2});
+                    new Sports { SportName = "Basketball", SportId = 2 });
 
 
 
@@ -43,9 +44,19 @@ namespace Sportsblog
                     new Tags { TagName = "World Cup", TagId = 3 });
 
 
+                modelBuilder.Entity<Posts>().HasData(
+
+                    new Posts { Title = "USA Women's Team", PostId = 1, PostContent = "The woman will have there hands full with France!", Date = "", SportId = 1, Tags = "World Cup" },
+
+                    new Posts { Title = "France Goes Down", PostId = 2, PostContent = "USA took care of France with penalty kicks!", Date = "", SportId = 1, Tags = "Spoiler" },
+
+                    new Posts { Title = "Cavs", PostId = 2, PostContent = "The Cavs draft class seems to be pretty good", Date = "", SportId = 2, Tags = "Hot Take" },
+
+                    new Posts { Title = "Durant", PostId = 3, PostContent = "Kevin Durant just turned down 31 mil!", Date = "", SportId = 2, Tags = "Hot Take" });
+
             }
 
         }
 
     }
-
+}
