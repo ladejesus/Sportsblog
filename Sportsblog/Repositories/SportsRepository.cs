@@ -1,5 +1,4 @@
 ﻿using Sportsblog.Models;
-using Sportsblog.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;

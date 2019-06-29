@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Sportsblog.Models;
 using Sportsblog.Repositories;
-using Sportsblog.Repository;
 
 namespace Sportsblog
 {
