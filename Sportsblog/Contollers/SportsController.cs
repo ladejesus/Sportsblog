@@ -18,7 +18,7 @@ namespace Sportsblog.Contollers
         }
 
         //Takes user to the main landing page named AllSports, displays sports.
-        public ViewResult AllSports()
+        public ViewResult Index()
         {
             var model = sportsRepo.GetAll();
             return View(model);

@@ -1,0 +1,45 @@
+﻿@model Sportsblog.Models.Sports
+
+@{
+    Layout = "/Views/Shared/_layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SingleSport</title>
+</head>
+<body>
+    <br />
+    <h1>@Model.SportName</h1>
+
+    <div class="infobox">
+        @*<img src="~/Images/@Model.ImageUrl" alt="Alternate Text" /><br />*@
+        <p>@Model.SportName</p><br />
+        <br />
+    </div>
+    <h2>Reviews</h2>
+    <main class="createbox">
+        <div>
+            <a href="/Posts/CreatePost/@Model.SportId">Create Post</a>
+            <br />
+        </div>
+
+        @foreach (var post in Model.Posts)
+        {
+            <div>
+
+                <p>@post.Title</p>
+                <br>
+                <p>@post.PostContent</p>
+                <a href="/Post/EditPost/@post.PostId">Edit Review</a>
+                <a href="/Post/DeletePost/@post.PostId">Delete Review</a>
+
+            </div>
+            <br />
+        }
+    </main>
+</body>
+</html>

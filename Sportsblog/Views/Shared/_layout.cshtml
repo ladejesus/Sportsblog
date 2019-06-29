@@ -1,7 +1,29 @@
 ﻿
 @{
-    ViewData["Title"] = "_layout";
+    Layout = null;
 }
+@*<link rel="stylesheet" type="text/css" href="~/CSS/LayOut.css">
 
-<h2>_layout</h2>
+<link href="" rel="stylesheet">*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Default</title>
+</head>
+<body>
+    <nav>
+        <div>
+            <img src="~/Images/HorrificReviews.png">
+            <span>Horrific Reviews</span>
+        </div>
+        <a class="push" href="/">Home</a>
+        <a href="/Sports/Index">Index</a>
+    </nav>
+    @RenderBody()
+    <footer> Copyright 2019</footer>
+</body>
+</html>
 
