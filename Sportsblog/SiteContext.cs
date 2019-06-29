@@ -29,9 +29,9 @@ namespace Sportsblog
             {
                 modelBuilder.Entity<Sports>().HasData(
 
-                    new Sports { SportName = "Soccer", SportId = 1 },
+                    new Sports { SportName = "Soccer", SportId = 1, ImageUrl ="/CSS/Images/MessiRonaldo.jpg"},
 
-                    new Sports { SportName = "Basketball", SportId = 2 });
+                    new Sports { SportName = "Basketball", SportId = 2, ImageUrl = "/CSS/Images/Jordan.jpg" });
 
 
 

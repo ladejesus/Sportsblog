@@ -26,7 +26,7 @@ namespace Sportsblog.Contollers
         [HttpGet]
         public ViewResult CreateReview(int id)
         {
-            ViewBag.MovieId = id;
+            ViewBag.PostId = id;
             return View();
         }
 
@@ -66,7 +66,7 @@ namespace Sportsblog.Contollers
         }
 
         [HttpPost]
-        public ActionResult EditReview(Posts post)
+        public ActionResult EditPost(Posts post)
         {
             postsRepo.Edit(post);
 

@@ -25,7 +25,7 @@ namespace Sportsblog.Contollers
         }
 
         //Takes user to the Single Sport page which displays the posts within the selected sport.
-        public ActionResult SingleGenre(int id)
+        public ActionResult SingleSport(int id)
         {
             var model = sportsRepo.GetById(id);
             return View(model);

@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Sportsblog;
 
 namespace Sportsblog.Migrations
 {
     [DbContext(typeof(SiteContext))]
-    partial class SiteContextModelSnapshot : ModelSnapshot
+    [Migration("20190629132701_namechange")]
+    partial class namechange
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -56,8 +58,6 @@ namespace Sportsblog.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ImageUrl");
-
                     b.Property<string>("SportName");
 
                     b.HasKey("SportId");
@@ -65,8 +65,8 @@ namespace Sportsblog.Migrations
                     b.ToTable("Sports");
 
                     b.HasData(
-                        new { SportId = 1, ImageUrl = "/CSS/Images/MessiRonaldo.jpg", SportName = "Soccer" },
-                        new { SportId = 2, ImageUrl = "/CSS/Images/Jordan.jpg", SportName = "Basketball" }
+                        new { SportId = 1, SportName = "Soccer" },
+                        new { SportId = 2, SportName = "Basketball" }
                     );
                 });
 

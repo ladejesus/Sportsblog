@@ -10,8 +10,8 @@ namespace Sportsblog.Models
     {
         [Key]
         public int SportId { get; set; }
-
         public string SportName { get; set; }
+        public string ImageUrl { get; set; }
 
         public virtual List<Posts> Posts { get; set; }
 

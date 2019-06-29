@@ -17,15 +17,15 @@ namespace Sportsblog.Contollers
             this.tagsRepo = tagsRepo;
         }
 
-        //Takes user to the main landing page named AllGenres, displays genres.
-        public ViewResult AllGenres()
+        //Takes user to the main landing page named AllTags, displays Tag info.
+        public ViewResult AllTags()
         {
             var model = tagsRepo.GetAll();
             return View(model);
         }
 
-        //Takes user to the Single Genre page which displays the movies within the selected genre.
-        public ActionResult SingleGenre(int id)
+        //Takes user to the Single Tag page which displays the Posts within the selected Tag.
+        public ActionResult SingleTag(int id)
         {
             var model = tagsRepo.GetById(id);
             return View(model);
