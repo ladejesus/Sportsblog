@@ -1,6 +1,6 @@
-﻿
+﻿@model IEnumerable<Sportsblog.Models.Sports>
 @{
-    Layout = null;
+    Layout = "/Views/Shared/_layout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -11,5 +11,19 @@
     <title>Index</title>
 </head>
 <body>
+    <h1>Sports</h1>
+    <main>
+
+        @foreach (var item in Model)
+        {
+            <a href="Sports/SingleSport/@item.SportId">
+
+                @*<img src="~/Images/@item.ImageUrl" alt="Alternate Text" />*@
+                <h2>@item.SportName</h2>
+
+            </a>
+        }
+
+    </main>
 </body>
 </html>

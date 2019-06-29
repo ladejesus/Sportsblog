@@ -18,14 +18,14 @@ namespace Sportsblog.Contollers
         }
 
         //Takes user to the main landing page named AllSports, displays sports.
-        public ViewResult AllSports()
+        public ViewResult Index()
         {
             var model = sportsRepo.GetAll();
             return View(model);
         }
 
         //Takes user to the Single Sport page which displays the posts within the selected sport.
-        public ActionResult SingleGenre(int id)
+        public ActionResult SingleSport(int id)
         {
             var model = sportsRepo.GetById(id);
             return View(model);
