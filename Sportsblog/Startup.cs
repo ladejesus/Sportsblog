@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Sportsblog.Models;
 using Sportsblog.Repositories;
@@ -38,7 +33,7 @@ namespace Sportsblog
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Sports}/{action=Index}/{id}");
+                    template: "{controller=Sports}/{action=Index}/{id?}");
             });
         }
     }
