@@ -15,7 +15,7 @@ namespace Sportsblog
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=MusicTesting;Trusted_Connection=True;";
+            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=Sportsblog;Trusted_Connection=True;";
 
             optionsBuilder.UseSqlServer(connectionString)
                           .UseLazyLoadingProxies();
@@ -46,13 +46,13 @@ namespace Sportsblog
 
                 modelBuilder.Entity<Posts>().HasData(
 
-                    new Posts { Title = "USA Women's Team", PostId = 1, PostContent = "The woman will have there hands full with France!", Date = "", SportId = 1, TagId = 3 },
+                    new Posts { Title = "USA Women's Team", PostId = 1, PostContent = "The woman will have there hands full with France!", DateTime = "2019, 6, 24", SportId = 1, TagId = 3 },
 
-                    new Posts { Title = "France Goes Down", PostId = 2, PostContent = "USA took care of France with penalty kicks!", Date = "", SportId = 1, TagId = 1},
+                    new Posts { Title = "France Goes Down", PostId = 2, PostContent = "USA took care of France with penalty kicks!", DateTime = "2019, 6, 25", SportId = 1, TagId = 1},
 
-                    new Posts { Title = "Cavs", PostId = 4, PostContent = "The Cavs draft class seems to be pretty good", Date = "", SportId = 2, TagId = 2 },
+                    new Posts { Title = "Cavs", PostId = 4, PostContent = "The Cavs draft class seems to be pretty good", DateTime = "2019, 6, 25", SportId = 2, TagId = 2 },
 
-                    new Posts { Title = "Durant", PostId = 3, PostContent = "Kevin Durant just turned down 31 mil!", Date = "", SportId = 2, TagId = 2});
+                    new Posts { Title = "Durant", PostId = 3, PostContent = "Kevin Durant just turned down 31 mil!", DateTime = "2019, 6, 26", SportId = 2, TagId = 2});
 
             }
 

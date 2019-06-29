@@ -12,7 +12,7 @@ namespace Sportsblog.Models
         public int PostId { get; set; }
         public string Title { get; set; }
         public string PostContent { get; set; }
-        public string Date { get; set; }
+        public string DateTime { get; set; }
         public int SportId { get; set; }
         public int TagId { get; set; }
 
