@@ -31,7 +31,10 @@
             </div>
             <div class="form-group">
                 <label asp-for="PostContent" class="control-label"></label>
-                <input asp-for="PostContent" class="form-control" />
+                <input asp-for="PostContent" type="hidden" value=@Model.PostId ssp-for ="PostId" class="form-control" />
+                <br />
+                <textarea asp-for="Content" class="form-control" style="width:300px; height:200px;">
+                </textarea>
                 <span asp-validation-for="PostContent" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -40,13 +43,13 @@
                 <span asp-validation-for="DateTime" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="SportId" class="control-label"></label>
-                <input asp-for="SportId" class="form-control" />
+                @*<label asp-for="SportId" class="control-label"></label>*@
+                <input asp-for="SportId" type="hidden" value=@Model.SportId class="form-control" />
                 <span asp-validation-for="SportId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TagId" class="control-label"></label>
-                <input asp-for="TagId" class="form-control" />
+                @*<label asp-for="TagId" class="control-label"></label>*@
+                <input asp-for="TagId" type ="hidden" value=@Model.TagId class ="form-control" />
                 <span asp-validation-for="TagId" class="text-danger"></span>
             </div>
             <div class="form-group">
