@@ -29,8 +29,8 @@ namespace Sportsblog.Repositories
 
         //unused
         public void Create(Sports obj)
-        {
-            throw new NotImplementedException();
+       {
+           throw new NotImplementedException();
         }
 
         public void Delete(Sports obj)

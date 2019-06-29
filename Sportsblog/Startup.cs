@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Sportsblog.Models;
+using Sportsblog.Repositories;
+using Sportsblog.Repository;
 
 namespace Sportsblog
 {
@@ -16,6 +19,10 @@ namespace Sportsblog
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDbContext<SiteContext>();
+            services.AddScoped<IRepository<Posts>, PostsRepository>();
+            services.AddScoped<IRepository<Sports>, SportsRepository>();
+            services.AddScoped<IRepository<Tags>, TagsRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

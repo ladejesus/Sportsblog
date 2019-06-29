@@ -34,7 +34,7 @@ namespace Sportsblog.Contollers
         public ActionResult CreateReview(Posts post)
         {
             postsRepo.Create(post);
-            return RedirectToAction("../Movie/SingleMovie/" + post.SportId);
+            return RedirectToAction("../Posts/SinglePost/" + post.SportId);
         }
 
         public object SinglePost()
@@ -54,7 +54,7 @@ namespace Sportsblog.Contollers
         public ActionResult DeleteReview(Posts post)
         {
             postsRepo.Delete(post);
-            return RedirectToAction("../Movie/SingleMovie/" + post.SportId);
+            return RedirectToAction("../Posts/SinglePost/" + post.SportId);
         }
 
         //Edit Review
@@ -70,7 +70,7 @@ namespace Sportsblog.Contollers
         {
             postsRepo.Edit(post);
 
-            return RedirectToAction("../Movie/SingleMovie/" + post.SportId);
+            return RedirectToAction("../Posts/SinglePost/" + post.SportId);
         }
     }
 }
