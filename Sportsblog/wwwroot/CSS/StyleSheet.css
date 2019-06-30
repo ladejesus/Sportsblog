@@ -32,12 +32,12 @@ h1{
 
 #posts{
 
-    display:flex;
+    /*display:flex;
     flex-direction: row;
     text-align: center;
     justify-content: space-around;
     padding: 5vh 0 5vh 0;
-    color:white;
+    color:white;*/
 
 
 }
