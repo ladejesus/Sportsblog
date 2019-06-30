@@ -1,7 +1,7 @@
 ﻿@model Sportsblog.Models.Sports
 
 @{
-    Layout = "/Views/Shared/_layout.cshtml";
+    Layout = "_layout";
 }
 
 <!DOCTYPE html>
@@ -16,11 +16,11 @@
     <h1>@Model.SportName</h1>
 
     <div class="infobox">
-        @*<img src="~/Images/@Model.ImageUrl" alt="Alternate Text" /><br />*@
+       @*<img src="~/Images/@Model.ImageUrl" alt="Alternate Text" /><br />*@
         <p>@Model.SportName</p><br />
         <br />
     </div>
-    <h2>Reviews</h2>
+    <h2>Posts</h2>
     <main class="createbox">
         <div>
             <a href="/Posts/CreatePost/@Model.SportId">Create Post</a>
@@ -29,13 +29,13 @@
 
         @foreach (var post in Model.Posts)
         {
-            <div>
+            <div class="posts">
 
-                <p>@post.Title</p>
+                <h3>@post.Title</h3>
                 <br>
                 <p>@post.PostContent</p>
-                <a href="/Post/EditPost/@post.PostId">Edit Review</a>
-                <a href="/Post/DeletePost/@post.PostId">Delete Review</a>
+                <a href="/Post/EditPost/@post.PostId">Edit Post</a>
+                <a href="/Post/DeletePost/@post.PostId">Delete Post</a>
 
             </div>
             <br />
