@@ -74,13 +74,17 @@ ul {
     }
 
 nav {
+    display: flex;
+    flex-direction: row;
     padding: 0px 0px 0px 0px;
     max-width: 100vw;
     min-width: 100vw;
+
 }
 
     nav ul {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         width: 25%;
         font-size: 13px;
@@ -89,7 +93,7 @@ nav {
 
 body {
     width: 100%;
-    background-image: url("/Images/Jordan.jpg");
+    background-image: url("/Images/MJordan.jpeg");
     background-size: cover;
 }
 

@@ -1,0 +1,27 @@
+﻿@model Sportsblog.Models.Posts
+
+@{
+    Layout = "/Views/Shared/_layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SinglePost</title>
+</head>
+<body>
+    <br />
+    <h1>@Model.Title</h1>
+
+    <div class="infobox">
+        <p>@Model.PostContent</p><br />
+        <br />
+                <
+        <a href="/Posts/EditReview/@Model.PostId">Edit Review</a>
+        <a href="/Posts/DeleteReview/@Model.PostId">Delete Review</a>
+        <br />
+    </div>
+</body>
+</html>

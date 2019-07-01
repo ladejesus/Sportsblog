@@ -1,5 +1,5 @@
 ﻿@model Sportsblog.Models.Posts
-
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     Layout = null;
 }
@@ -13,55 +13,34 @@
 </head>
 <body>
 
-<h4>Posts</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="EditPost">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="PostId" class="control-label"></label>
-                <input asp-for="PostId" class="form-control" />
-                <span asp-validation-for="PostId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PostContent" class="control-label"></label>
-                <input asp-for="PostContent" type="hidden" value=@Model.PostId ssp-for ="PostId" class="form-control" />
-                <br />
-                <textarea asp-for="Content" class="form-control" style="width:300px; height:200px;">
-                </textarea>
-                <span asp-validation-for="PostContent" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DateTime" class="control-label"></label>
-                <input asp-for="DateTime" class="form-control" />
-                <span asp-validation-for="DateTime" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                @*<label asp-for="SportId" class="control-label"></label>*@
-                <input asp-for="SportId" type="hidden" value=@Model.SportId class="form-control" />
-                <span asp-validation-for="SportId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                @*<label asp-for="TagId" class="control-label"></label>*@
-                <input asp-for="TagId" type ="hidden" value=@Model.TagId class ="form-control" />
-                <span asp-validation-for="TagId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
-            </div>
-        </form>
+    <h4>Posts</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="EditPost">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" value="@Model.PostId" asp-for="PostId" />
+                <div class="form-group">
+                    <label asp-for="PostContent" class="control-label"></label>
+                    <input asp-for="PostContent" class="form-control" />
+                    <span asp-validation-for="PostContent" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="SportId" type="hidden" value="@Model.SportId" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input asp-for="TagId" type="hidden" value="@Model.TagId" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </form>
+         </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+    <div>
+        <a asp-controller="Posts" asp-action="SinglePost">Back to List</a>
+    </div>
 
 </body>
 </html>

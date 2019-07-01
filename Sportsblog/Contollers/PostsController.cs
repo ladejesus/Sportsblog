@@ -24,34 +24,31 @@ namespace Sportsblog.Contollers
 
         //Create Review
         [HttpGet]
-        public ViewResult CreateReview(int id)
+        public ViewResult CreatePost(int id)
         {
-            ViewBag.PostId = id;
+            ViewBag.SportId = id;
             return View();
         }
 
         [HttpPost]
-        public ActionResult CreateReview(Posts post)
+        public ActionResult CreatePost(Posts post)
         {
             postsRepo.Create(post);
             return RedirectToAction("../Posts/SinglePost/" + post.SportId);
         }
 
-        public object SinglePost()
-        {
-            throw new NotImplementedException();
-        }
+        
 
         //Delete Review
         [HttpGet]
-        public ViewResult DeleteReview(int id)
+        public ViewResult DeletePost(int id)
         {
             ViewBag.postId = id;
             return View();
         }
 
         [HttpPost]
-        public ActionResult DeleteReview(Posts post)
+        public ActionResult DeletePost(Posts post)
         {
             postsRepo.Delete(post);
             return RedirectToAction("../Posts/SinglePost/" + post.SportId);
@@ -70,7 +67,7 @@ namespace Sportsblog.Contollers
         {
             postsRepo.Edit(post);
 
-            return RedirectToAction("../Posts/SinglePost/" + post.SportId);
+            return RedirectToAction("../Sports/SingleSport/" + post.SportId);
         }
     }
 }

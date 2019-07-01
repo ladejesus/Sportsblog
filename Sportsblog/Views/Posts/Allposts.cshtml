@@ -1,7 +1,8 @@
 ﻿@model IEnumerable<Sportsblog.Models.Posts>
 @{
-    Layout = null;
+    Layout = "/Views/Shared/_layout.cshtml";
 }
+
 
 <!DOCTYPE html>
 
@@ -11,5 +12,21 @@
     <title>Allposts</title>
 </head>
 <body>
+    <div>
+        <h1> All Posts </h1>
+    </div>
+    <main>
+
+        @foreach (var item in Model)
+        {
+
+            <a href="Posts/SinglePost/@item.PostId">
+                <p>@item.Title</p>
+                <p>@item.PostContent</p>
+            </a>
+            
+        }
+
+    </main>
 </body>
 </html>

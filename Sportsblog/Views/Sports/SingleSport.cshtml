@@ -1,8 +1,9 @@
 ﻿@model Sportsblog.Models.Sports
 
 @{
-    Layout = "_layout";
+    Layout = "/Views/Shared/_layout.cshtml";
 }
+
 
 <!DOCTYPE html>
 
@@ -34,8 +35,8 @@
                 <h3>@post.Title</h3>
                 <br>
                 <p>@post.PostContent</p>
-                <a href="/Post/EditPost/@post.PostId">Edit Post</a>
-                <a href="/Post/DeletePost/@post.PostId">Delete Post</a>
+                <a href="/Posts/EditPost/@post.PostId">Edit Post</a>
+                <a href="/Posts/DeletePost/@post.PostId">Delete Post</a>
 
             </div>
             <br />

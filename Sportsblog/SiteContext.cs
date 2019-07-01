@@ -37,6 +37,7 @@ namespace Sportsblog
 
                 modelBuilder.Entity<Tags>().HasData(
 
+
                     new Tags { TagName = "Spoiler", TagId = 1 },
 
                     new Tags { TagName = "Hot Take", TagId = 2 },
