@@ -22,10 +22,11 @@ main a {
     font-size: 2em;
     margin: .5em 2em auto;
     text-decoration: none;
-    display: inline-grid;
-    justify-content: center;
+    display:flex;
+    justify-content:space-between;
     align-items: center;
     color: white;
+
 }
 .push{
     color: white;
@@ -43,21 +44,9 @@ h1{
     justify-content: flex-start;
 }
 
-    .createbox div {
+ .createbox div {
         margin: 1em;
-    }
-
-#posts{
-
-    /*display:flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: space-around;
-    padding: 5vh 0 5vh 0;
-    color:white;*/
-
-
-}
+ }
 
 
 header {
