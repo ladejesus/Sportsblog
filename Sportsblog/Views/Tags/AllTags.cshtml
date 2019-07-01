@@ -2,7 +2,6 @@
 @{
     Layout = "/Views/Shared/_layout.cshtml";
 }
-}
 
 <!DOCTYPE html>
 
@@ -12,5 +11,21 @@
     <title>AllTags</title>
 </head>
 <body>
+    <h1>Sports Blog</h1>
+    <br>
+    <h3> Please choose which tags you would like to see!</h3>
+    <main>
+
+        @foreach (var item in Model)
+        {
+            <a href="/Tags/SingleTag/@item.TagId">
+
+                
+                <h2>@item.TagName</h2>
+
+            </a>
+        }
+
+    </main>
 </body>
 </html>

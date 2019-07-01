@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Allposts</title>
+    <title>All Posts</title>
 </head>
 <body>
     <div>
@@ -20,11 +20,12 @@
         @foreach (var item in Model)
         {
 
-            <a href="Posts/SinglePost/@item.PostId">
+            <a href="/Posts/SinglePost/@item.PostId">
                 <p>@item.Title</p>
+                <br />
                 <p>@item.PostContent</p>
             </a>
-            
+
         }
 
     </main>

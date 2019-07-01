@@ -1,4 +1,4 @@
-﻿@model Sportsblog.Models.Sports
+﻿@model Sportsblog.Models.Tags
 
 @{
     Layout = "/Views/Shared/_layout.cshtml";
@@ -14,16 +14,16 @@
 </head>
 <body>
     <br />
-    <h1>@Model.SportName</h1>
+    <h1>@Model.TagName</h1>
 
     <div class="infobox">
-       @*<img src="~/Images/@Model.ImageUrl" alt="Alternate Text" /><br />*@
+        <p>@Model.TagName</p><br />
         <br />
     </div>
     <h2>Posts</h2>
     <main class="createbox">
         <div>
-            <a href="/Posts/CreatePost/@Model.SportId">Create Post</a>
+            <a href="/Posts/CreatePost/@Model.TagName">Create Post</a>
             <br />
         </div>
 
@@ -33,15 +33,13 @@
 
                 <h4>@post.Title</h4>
                 <br>
-                <a>@post.PostContent</a>
+                <p>@post.PostContent</p>
                 <a href="/Posts/EditPost/@post.PostId">Edit Post</a>
                 <a href="/Posts/DeletePost/@post.PostId">Delete Post</a>
 
             </div>
             <br />
         }
-      
     </main>
-    <br />
 </body>
 </html>

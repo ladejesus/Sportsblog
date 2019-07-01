@@ -22,6 +22,18 @@ namespace Sportsblog.Contollers
             this.postsRepo = postsRepo;
         }
 
+        public ViewResult AllPosts()
+        {
+            var model = postsRepo.GetAll();
+            return View(model);
+        }
+
+        public ActionResult SinglePost(int id)
+        {
+            var model = postsRepo.GetById(id);
+            return View(model);
+        }
+
         //Create Review
         [HttpGet]
         public ViewResult CreatePost(int id)
