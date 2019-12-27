@@ -1,0 +1,1 @@
+An application called Ptich and Post that combines Basketball and Soccer in a blog format, allowing users to comment on a topic and tag a "Hot Take".  The backend uses an MVC pattern SQL and C#.  The Frontend is CSS and JS
